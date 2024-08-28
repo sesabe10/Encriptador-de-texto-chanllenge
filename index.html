@@ -1,28 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encriptador de texto</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-        <div class="input">    
-          <div class="input_text">            
-            <textarea name="input_area" placeholder="Ingrese texto aquí"></textarea>            
-          </div>
-          <div class="buttons">
-            <button>Encriptado</button>
-            <button>DESENCRIPTAR</button>
-          </div>
-        </div>      
-        <div class="output">        
-          <div class="message">
-            <p></p>
-          </div> 
-        </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Challenge - Encriptador de texto</title>
+        <link rel="shortcut icon" href="icono.png">       
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="images/logo-alura.png" alt="Logo de Alura">
+        </header>
+
+        <main>
+            <section>
+                <textarea id="entradaTexto" class="entrada-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí" autofocus></textarea>
+                <div>
+                    <h6 class= "restriccion">&#9888 Solo letras minúsculas y sin acentos.</h6>
+                </div>
+                <div class="botones">
+                    <button id="btnEncriptar" name="encriptar" class="encriptar">Encriptar</button>
+                    <button id="btnDesencriptar" name="desencriptar" class="desencriptar">Desencriptar</button>
+                </div>
+            </section>
+            <section>
+                <textarea id="salidaTexto" class="salida-texto" cols="20" rows="10" disabled></textarea>
+                <div class="dinamico">
+                    <h2 class="texto1">Ningún mensaje fue encontrado</h2>
+                    <h3 class="texto2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+                    <button id="btnCopiar" name="copiar" class="copiar" style="display: none;"><span class="anuncio"></span>Copiar</button>
+                </div>
+            </section>
+        </main>       
+    </body>
+    <script src="doom.js"></script>
 </html>
